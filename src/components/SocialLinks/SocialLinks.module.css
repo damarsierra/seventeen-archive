@@ -1,0 +1,18 @@
+.socialLinks {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.linkIcon {
+  margin-right: 1.75rem;
+}
+
+.linkIcon > svg {
+  max-width: 1.5rem;
+  margin: 0 1px;
+}
+
+.linkIcon > svg > path {
+  fill: #141414;
+}

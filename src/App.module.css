@@ -1,0 +1,12 @@
+body {
+  background: #f2ddde;
+  font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+  overflow-x: hidden;  
+}
+
+.mainArea {
+  min-height: 1000px;
+  position: relative;
+  z-index: 0;
+  margin-top: -70px;
+}
