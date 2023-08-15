@@ -1,21 +1,27 @@
-import React from "react";
+import { useEffect, useState } from "react";
 
 import styles from './SliderSegment.module.css'
+import { fetchPlaylist } from "../../api/YouTubeApi";
 
-const placeholderImg = "https://i.ytimg.com/vi/_VY-lZAQbfg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDdOU8J2FqJw7sZr37U_teB52PePg";
+const endpoint = `https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=10&playlistId=PLk_UmMfvZDx21Z9eEQ9DcIlUfZp1uwEup&key=`
 
-const SliderSegment = () => (
+const SliderSegment = () => {
+  const [episodes, setEpisodes] = useState([]);
+
+  useEffect(() => {
+    Promise.all([
+      fetchPlaylist(endpoint)
+    ]).then((results) => {
+      setEpisodes(results[0]);
+    })
+  }, []);
+
+  return (
   <div className={styles.shows}>
-    <img className={styles.showImage} src={placeholderImg} alt="" />
-    <img className={styles.showImage} src={placeholderImg} alt="" />
-    <img className={styles.showImage} src={placeholderImg} alt="" />
-    <img className={styles.showImage} src={placeholderImg} alt="" />
-    <img className={styles.showImage} src={placeholderImg} alt="" />
-    <img className={styles.showImage} src={placeholderImg} alt="" />
-    <img className={styles.showImage} src={placeholderImg} alt="" />
-    <img className={styles.showImage} src={placeholderImg} alt="" />
-    <img className={styles.showImage} src={placeholderImg} alt="" />
+    {episodes.map(episode =>
+      <img key={episode.id} className={styles.showImage} src={episode.snippet.thumbnails.medium.url} alt="" />
+    )}
   </div>
-);
+)};
 
 export default SliderSegment;
