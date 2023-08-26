@@ -1,0 +1,24 @@
+.handle {
+  background: blue;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  z-index: 20;
+  
+  &.left {
+    left: 0px;
+    border-top-right-radius: 0.2vw;
+    border-bottom-right-radius: 0.2vw;
+  }
+  &.right {
+    right: 0px;
+    border-top-left-radius: 0.2vw;
+    border-bottom-left-radius: 0.2vw;
+  }
+}

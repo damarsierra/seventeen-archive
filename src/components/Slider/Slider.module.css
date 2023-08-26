@@ -1,14 +1,14 @@
-.slider {
+.container {
   display: flex;
   flex-direction: column;
   position: relative;
   box-sizing: border-box;
   z-index: 2;
   margin: 2vw 0;
-  padding: 0 60px;
 }
 
 .sliderTitle {
+  padding: 0 60px;
   color: #141414;
   min-width: 6em;
   font-size: 1.4vw;
