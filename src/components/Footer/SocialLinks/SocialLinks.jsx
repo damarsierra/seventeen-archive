@@ -1,9 +1,9 @@
 import React from "react";
 import styles from './SocialLinks.module.css';
 
-import TwitterIcon from "../TwitterIcon";
-import InstagramIcon from '../InstagramIcon';
-import YouTubeIcon from '../YouTubeIcon';
+import TwitterIcon from "../../../Icons/TwitterIcon";
+import InstagramIcon from '../../../Icons/InstagramIcon';
+import YouTubeIcon from '../../../Icons/YouTubeIcon';
 
 const SocialLinks = () => {
   return (
