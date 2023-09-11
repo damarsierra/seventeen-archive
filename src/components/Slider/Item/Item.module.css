@@ -1,0 +1,10 @@
+.image {
+  padding: 0.2rem;
+  box-sizing: border-box;
+  border-radius: 0.5vw;
+  aspect-ratio: 16 / 9;
+}
+
+.imageLink {
+  display: contents;
+}

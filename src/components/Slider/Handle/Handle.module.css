@@ -10,13 +10,14 @@
   position: absolute;
   text-align: center;
   z-index: 20;
+  cursor: pointer;
   
-  &.left {
+  &.prev {
     left: 0px;
     border-top-right-radius: 0.2vw;
     border-bottom-right-radius: 0.2vw;
   }
-  &.right {
+  &.next {
     right: 0px;
     border-top-left-radius: 0.2vw;
     border-bottom-left-radius: 0.2vw;

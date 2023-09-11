@@ -1,0 +1,10 @@
+.slider {
+  position: relative;
+}
+
+.sliderContent {
+  display: flex;
+  position: relative;
+  padding: 0 60px;
+  /* transform: translate3d(-92.855%, 0px, 0px); */
+}

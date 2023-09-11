@@ -7,6 +7,21 @@ import Billboard from './components/Billboard'
 import Slider from './components/Slider'
 import Footer from './components/Footer'
 
+const playlists = [
+  {
+    title: 'Going Seventeen',
+    id: `PLk_UmMfvZDx21Z9eEQ9DcIlUfZp1uwEup`
+  },
+  {
+    title: 'SVT Record',
+    id: `PLk_UmMfvZDx2NxKtr1WOs3w4f2GoTpful`
+  },
+  {
+    title: 'INSIDE SEVENTEEN',
+    id: `PLk_UmMfvZDx0jZNccOaFJbMqKwvwwUfAN`
+  },
+]
+
 function App() {
 
   /**
@@ -30,7 +45,8 @@ function App() {
       <NavBar />
       <div className={styles.mainArea}>
         <Billboard />
-        <Slider />
+        {playlists.map(playlist => <Slider key={playlist.title} title={playlist.title} id={playlist.id} /> )
+          }
       </div>
       <Footer />
     </div>
