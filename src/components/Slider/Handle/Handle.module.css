@@ -1,14 +1,14 @@
 .handle {
-  background: blue;
+  background: hsla(0,0%,8%,.5);
+  position: absolute;
   top: 0;
   bottom: 0;
   width: 60px;
-  color: #fff;
+  color: transparent;
   border: none;
   display: flex;
   justify-content: center;
-  position: absolute;
-  text-align: center;
+  align-items: center;
   z-index: 20;
   cursor: pointer;
   
@@ -22,4 +22,13 @@
     border-top-left-radius: 0.2vw;
     border-bottom-left-radius: 0.2vw;
   }
+}
+
+.handle:hover {
+  background: hsla(0,0%,8%,.7);
+  color: #fff;
+}
+
+.handle > svg {
+  height: 2vw;
 }
